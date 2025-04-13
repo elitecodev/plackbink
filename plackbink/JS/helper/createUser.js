@@ -1,0 +1,1 @@
+export const generateUser = s => s.reduce((a, c, i) => a + +(c.charCodeAt(0)) * i, 0) % 5663;
