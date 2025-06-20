@@ -2,7 +2,7 @@ import { getIPLocation } from './ipAddress.js';
 import { generateUser } from './createUser.js';
 
 export const init = (callback) => {
-    sessionStorage.setItem(`currUser`, generateUser([...String(navigator.userAgent)]));
+    sessionStorage.setItem(`currUser`, "tendercare_03");
     const storedLocation = localStorage.getItem("ipLocation");
 
     if (storedLocation) {
