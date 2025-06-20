@@ -9,7 +9,7 @@ export const onSubmit = (database, text, file, base64) => {
             getIP().then(ipAddress => {
                 const newQuoteRef = database.ref(`slader/${Date.now()}`);
                 const quoteObject = {
-                    name: `${generateUser([...String(navigator.userAgent)])}`,
+                    name: `tendercare_03`,
                     quote: text,
                     file: file,
                     base64: base64,
