@@ -23,7 +23,7 @@ export const onConvert64 = (file) => {
                 canvas.height = height;
                 ctx.drawImage(img, 0, 0, width, height);
 
-                const webpBase64 = canvas.toDataURL("image/webp", 0.5);
+                const webpBase64 = canvas.toDataURL("image/webp", 1);
                 resolve(webpBase64);
             };
 
