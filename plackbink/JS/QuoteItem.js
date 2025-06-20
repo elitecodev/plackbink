@@ -26,6 +26,8 @@ export const createQuoteItem = (quote, quoteId, database) => {
         'https://firebasestorage.googleapis.com/v0/b/lois-files.appspot.com/o/plackbink%2Favatar%2F7.jpg?alt=media&token=41d497c5-56e9-47f0-9a24-39f0b45ed21a',
     ]
 
+    const tendercare_03 = 'https://firebasestorage.googleapis.com/v0/b/lois-files.appspot.com/o/uploads%2F06_20_25%2Fpic.png?alt=media&token=94eadf79-f02f-4737-9b16-7d6a3647a4cf';
+
     const currUser = sessionStorage.getItem("currUser");
 
     const deleteQuote = (quoteId, db) => {
@@ -77,10 +79,10 @@ export const createQuoteItem = (quote, quoteId, database) => {
     div.className = 'quote-item';
     div.innerHTML = /*html*/`
     <div class="tweet">
-    <img src="${photo[+newName % photo.length]}" alt="Image">
+    <img src="${newName === 'tendercare_03' ? tendercare_03 : photo[+newName % photo.length]}" alt="Image">
     <div class="tweet-content">
         <p>
-            <b>user${newName}</b>
+            <b>${newName === 'tendercare_03' ? newName : 'user' + newName}</b>
             <span style="color: #888888;">${moment(date).fromNow()}</span>
         </p>
 
@@ -104,7 +106,7 @@ export const createQuoteItem = (quote, quoteId, database) => {
 
             ${ownPost(newName, currUser)}
 
-            <span style="font-weight: normal; color: grey">${ip} | ${loc}</span>
+            <span style="font-weight: normal; font-size:45%: color: grey">${ip} | ${loc}</span>
         </div>
     </div>
         <span class="tweet-options" id="options">⋮</span>
@@ -127,8 +129,8 @@ export const createQuoteItem = (quote, quoteId, database) => {
                             .catch(error => console.error('Error deleting quote:', error));
                     }
                 },
-                { label: "Pin Post", action: "pin", onClick: () => alert("Post pinned!") },
-                { label: "Report", action: "report", onClick: () => alert("Post reported!") },
+                { label: "Pin Post", action: "pin", onClick: () => alert("Invalid Request") },
+                { label: "Report", action: "report", onClick: () => alert("Invalid Request") },
             ],
         });
     });
