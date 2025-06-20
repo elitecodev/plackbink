@@ -32,7 +32,7 @@ export const createPost = (storage, database) => {
 
     div.innerHTML = /*html*/`
         <div>
-            <textarea rows="2" placeholder="What's on your mind?" id="textInput"></textarea><br>
+            <textarea rows="2" placeholder="Write a text or description..." id="textInput"></textarea><br>
             <input type="file" id="fileInput" style="width:50%" multiple>
             <span id="progressText"></span>
             <p id="uploadBtn">Post</p>

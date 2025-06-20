@@ -15,10 +15,13 @@ export const createRoot = () => {
     const $ = (selector) => div.querySelector(selector);
 
     div.innerHTML = /*html*/`
-    <div class="container">
-    <div class="header">
-        PLΛƆKBIИK
+    <div class="container2">
+    <div class="header">    
         <span class="theme-toggle" id="toggle"><i class="bi bi-sun"></i></span>
+        <span> PLΛƆK BIИK </span>
+        <pre style="font-size:45%">FILE REPOSITORY
+             파일 저장소
+           DEV: LOUIE</pre>
     </div>
     <div id='nav'>
         <!-- Nav.js -->
