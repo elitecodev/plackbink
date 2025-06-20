@@ -1,12 +1,10 @@
-﻿body {
+body {
     font-family: Arial, sans-serif;
     font-size: 14px;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    max-width: 600px;
+    width: 100%;
     min-height: 100vh;
-    transition: background 0.3s, color 0.3s;
 }
 
 .container {
